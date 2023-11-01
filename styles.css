@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px;
+}
+
+.image-container {
+    display: inline-block;
+    margin: 10px;
+}
+
+.gallery-image {
+    width: 200px;
+    height: 150px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.gallery-image:hover {
+    transform: scale(1.1);
+}
+
+.gallery-image.expanded {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+}
+
+.mode-switch {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+}
+
+#mode-toggle {
+    display: none;
+}
+
+#mode-toggle + label {
+    cursor: pointer;
+}
+
+#mode-toggle:checked + label::before {
+    content: "Light Mode";
+}
+
+#mode-toggle + label::before {
+    content: "Dark Mode";
+}
+
+body.dark-mode {
+    background: #353535;
+}
+
+.dark-mode .txt p:nth-child(1) {
+    color: #000;
+    font-weight: normal;
+}
+
+.dark-mode .txt p:nth-child(2) {
+    color: grey;
+    font-weight: bold;
+}
+
+/* Dark mode styles */
+h1 {
+    color: skyblue;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: "Century Gothic";
+    transition: 0.5s;
+}
+
+body {
+    background: white;
+    transition: 0.5s;
+}
+
+#ChangeTheme {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    top: 4px; /* Adjust the top position to align it with the slider */
+    left: 4px; /* Adjust the left position to align it with the slider */
+}
+
+label {
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    display: block;
+    width: 70px; /* Set the width to match the button's size */
+    height: 30px; /* Adjust the height as needed */
+}
+
+span.slide {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    border-radius: 30px; /* Make it slightly round for a better match */
+}
+
+span.slide:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 22px; /* Adjust the height to match the button's size */
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 22px; /* Adjust the width to match the button's size */
+    border-radius: 50%;
+}
+.txt {
+    position: relative;
+    transform: translatex(-50px);
+}
+
+.txt p:nth-child(1) {
+    color: grey;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: 0.5s;
+}
+
+#ChangeTheme:checked + span.slide:before {
+    transform: translatex(40px);
+}
+
+span.slider.round {
+border-radius: 34px;
+}
+
+span.slider.round:before {
+border-radius: 50%;
+}
