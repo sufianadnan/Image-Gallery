@@ -12,7 +12,7 @@ This is a basic image gallery web application with a dark/light mode toggle feat
 
 1. Clone this repository to your local machine.
 2. Open `index.html` in your web browser to view the image gallery.
-   or [Click Here for Live Demo](#)
+   or [Click Here for Live Demo](https://sufianadnan.github.io/Image-Gallery/)
 
 ## Acknowledgments
 
